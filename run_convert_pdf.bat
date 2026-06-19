@@ -12,7 +12,7 @@ echo ===================================================
 echo Memulai Program Konversi DOCX ke PDF...
 echo ===================================================
 echo.
-python convert_to_pdf.py %*
+python scripts\convert_to_pdf.py %*
 
 echo.
 echo ===================================================

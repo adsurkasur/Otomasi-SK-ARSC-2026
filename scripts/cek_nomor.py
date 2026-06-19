@@ -3,7 +3,8 @@ import glob
 from docx import Document
 import re
 
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+# BASE_DIR is set to the parent directory (project root) because the script is in scripts/
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 def main():
     docx_files = glob.glob(os.path.join(BASE_DIR, "docx", "SK Aktif*.docx"))

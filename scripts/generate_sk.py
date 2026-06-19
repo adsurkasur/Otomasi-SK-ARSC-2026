@@ -7,7 +7,8 @@ import argparse
 import datetime
 import difflib
 
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+# BASE_DIR is set to the parent directory (project root) because the script is in scripts/
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 BIRO_BIDANG_MAP = {
     'ADKEU': 'Administrasi dan Keuangan (ADKEU)',
@@ -137,7 +138,6 @@ def create_docx_for_person(person, doc_number, template_doc_path=None):
         print(f" -> Lewati: {output_filename} sudah ada (Tidak menimpa file).")
         return False
         
-    
     try:
         doc.save(output_path)
         print(f" -> Berhasil membuat: docx/{output_filename} (Nomor Surat: {doc_number:03d})")

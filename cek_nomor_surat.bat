@@ -9,7 +9,7 @@ if not exist venv\Scripts\activate.bat (
 call venv\Scripts\activate
 
 REM Jalankan script cek nomor
-python cek_nomor.py
+python scripts\cek_nomor.py
 
 echo.
 pause

@@ -26,10 +26,10 @@ if "%~1"=="" (
 REM Jika argumen pertama adalah file (drag and drop file .txt)
 if exist "%~1" (
     echo Memproses daftar nama dari file: %~1
-    python generate_sk.py --file "%~1"
+    python scripts\generate_sk.py --file "%~1"
 ) else (
     REM Jika argumen berupa nama-nama dari CMD
-    python generate_sk.py %*
+    python scripts\generate_sk.py %*
 )
 
 echo.

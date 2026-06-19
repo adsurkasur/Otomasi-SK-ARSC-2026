@@ -7,7 +7,9 @@ try:
 except ImportError:
     print("Error: Library 'docx2pdf' tidak ditemukan. Silakan install dengan 'pip install docx2pdf'")
     sys.exit(1)
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
+# BASE_DIR is set to the parent directory (project root) because the script is in scripts/
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 def main():
     print("=== DOCX to PDF Converter ===")
@@ -35,7 +37,7 @@ def main():
         docx_files = glob.glob(os.path.join(BASE_DIR, "docx", "*.docx"))
         
         # Abaikan temporary files dari Word (biasanya diawali dengan ~$)
-        docx_files = [f for f in docx_files if not f.startswith("~$")]
+        docx_files = [f for f in docx_files if not os.path.basename(f).startswith("~$")]
         
         if not docx_files:
             print("Tidak ada file .docx yang ditemukan di direktori saat ini.")
