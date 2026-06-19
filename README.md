@@ -39,7 +39,7 @@ Aplikasi ini membaca basis data anggota aktif dari Excel, mencocokkannya dengan 
 ## 💻 Cara Penggunaan
 
 ### 1. Persiapan Awal
-Pastikan file data anggota aktif (`PENDATAAN ANGGOTA AKTIF ARSC PERIODE 2025_2026 .xlsx`) berada di dalam folder `data/` dan template `Template_SK.docx` berada di folder `templates/`.
+Pastikan file data anggota aktif (`PENDATAAN ANGGOTA AKTIF ARSC PERIODE 2025_2026.xlsx`) berada di dalam folder `data/` dan template `Template_SK.docx` berada di folder `templates/`.
 
 ### 2. Membuat SK (Generate DOCX)
 1. Buka file `daftar.txt`.
