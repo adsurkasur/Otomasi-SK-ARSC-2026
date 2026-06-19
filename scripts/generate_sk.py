@@ -182,7 +182,7 @@ def main():
         print("  python generate_sk.py --all")
         return
 
-    excel_file = os.path.join(BASE_DIR, 'data', 'PENDATAAN ANGGOTA AKTIF ARSC PERIODE 2025_2026 .xlsx')
+    excel_file = os.path.join(BASE_DIR, 'data', 'PENDATAAN ANGGOTA AKTIF ARSC PERIODE 2025_2026.xlsx')
     try:
         df = pd.read_excel(excel_file)
     except Exception as e:

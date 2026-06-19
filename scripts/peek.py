@@ -6,7 +6,7 @@ from docx import Document
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # 1. Read Excel
-excel_path = os.path.join(BASE_DIR, 'data', 'PENDATAAN ANGGOTA AKTIF ARSC PERIODE 2025_2026 .xlsx')
+excel_path = os.path.join(BASE_DIR, 'data', 'PENDATAAN ANGGOTA AKTIF ARSC PERIODE 2025_2026.xlsx')
 try:
     if os.path.exists(excel_path):
         df = pd.read_excel(excel_path)
