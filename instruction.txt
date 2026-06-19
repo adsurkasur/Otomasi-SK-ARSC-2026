@@ -1,0 +1,32 @@
+# PANDUAN PENGGUNAAN OTOMASI SURAT KETERANGAN (SK) ARSC
+
+Proyek ini dibuat untuk mempermudah dan mengotomatiskan pembuatan Surat Keterangan Aktif bagi anggota pengurus.
+
+## Struktur Folder dan File
+- `data/`        : Tempat menyimpan data sumber. Pindahkan file Excel (.xlsx) pendataan ke dalam folder ini.
+- `templates/`   : Tempat menyimpan `Template_SK.docx`. Kamu bisa mengedit file ini asalkan tetap membiarkan teks dalam kurung siku `[NAMA]`, `[NIM]`, dll utuh.
+- `docx/`        : Tempat berkumpulnya file-file `.docx` Surat Keterangan yang berhasil dibuat.
+- `pdf/`         : Tempat berkumpulnya file-file `.pdf` hasil konversi.
+- `daftar.txt`   : File teks biasa tempat kamu menaruh daftar nama yang akan diproses (satu nama per baris).
+- `nomor_terakhir.txt`: Menyimpan nomor urut surat terakhir. Ubah angka di dalamnya untuk mereset/menyesuaikan nomor.
+
+## Cara Menggunakan Skrip
+
+1. **Membuat SK (Generate DOCX)**
+   - Buka `daftar.txt` dan masukkan nama-nama yang akan dibuatkan surat (pisahkan dengan baris baru atau Enter).
+   - Simpan (Save) `daftar.txt`.
+   - Cukup _Drag and Drop_ (tarik dan lepas) file `daftar.txt` tersebut ke atas file `run_generate.bat`.
+   - Skrip akan berjalan dan secara otomatis membaca `data/PENDATAAN ANGGOTA AKTIF ARSC PERIODE 2025_2026 .xlsx` lalu membuat file Word untuk masing-masing nama dan menyimpannya di folder `docx/`.
+
+2. **Mengecek Nomor Surat**
+   - Jalankan `cek_nomor_surat.bat` (klik 2x).
+   - Skrip akan membaca seluruh file di dalam `docx/` dan memastikan tidak ada nomor yang duplikat atau terlewat.
+
+3. **Mengonversi DOCX ke PDF**
+   - Jalankan `run_convert_pdf.bat` (klik 2x).
+   - Skrip akan mengonversi secara massal semua file `.docx` dari folder `docx/` yang belum memiliki PDF menjadi file `.pdf` ke folder `pdf/`.
+
+## Manajemen Virtual Environment (Venv)
+Jika kamu memindahkan direktori ini ke PC/Laptop lain, atau mengganti nama foldernya, kamu perlu me-reset Virtual Environment:
+1. Klik 2x `remove_venv.bat` untuk menghapus _environment_ lama.
+2. Tidak perlu repot install ulang manual! Kapan pun kamu menjalankan skrip-skrip utama (`run_generate`, `cek_nomor_surat`, dll), jika _environment_ tidak ditemukan, mereka akan memanggil `setup_venv.bat` secara otomatis untuk merakit ulang _environment_ dan mengunduh _library_ pendukung dari `requirements.txt`.
