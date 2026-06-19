@@ -8,6 +8,7 @@ Aplikasi ini membaca basis data anggota aktif dari Excel, mencocokkannya dengan 
 
 ## 📂 Struktur Direktori & File
 
+- `scripts/`: Berisi seluruh skrip Python utama (`generate_sk.py`, `cek_nomor.py`, `convert_to_pdf.py`, `peek.py`).
 - `data/` *(Diabaikan oleh Git)*: Tempat menyimpan file Excel sumber pendataan anggota aktif (misal: `PENDATAAN ANGGOTA AKTIF ARSC PERIODE 2025_2026 .xlsx`).
 - `templates/`: Menyimpan file template Word (`Template_SK.docx`). Semua font pada template ini telah dikonversi secara ketat menggunakan **Times New Roman**.
 - `docx/` *(Diabaikan oleh Git)*: Folder output hasil generate Surat Keterangan dalam format Word (`.docx`).
