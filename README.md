@@ -1,5 +1,7 @@
 # Otomasi Surat Keterangan (SK) ARSC 2026
 
+> Operator wajib membaca [`docs/OPERATOR_GUIDE.md`](docs/OPERATOR_GUIDE.md) dan menjalankan validasi data sintetis sebelum memproses data anggota atau menerbitkan surat nyata.
+
 Proyek ini dirancang untuk mempermudah dan mengotomatiskan pembuatan **Surat Keterangan Aktif** bagi anggota pengurus ARSC (Agricultural Technology Research Student Club) Fakultas Teknologi Pertanian Universitas Brawijaya.
 
 Aplikasi ini membaca basis data anggota aktif dari Excel, mencocokkannya dengan daftar nama yang ingin dibuatkan surat, lalu menghasilkan dokumen Word (.docx) berbasis template dengan penomoran surat yang otomatis dan terurut. Proyek ini juga dilengkapi dengan alat pemantau penomoran surat dan konversi otomatis dari format `.docx` ke `.pdf`.
